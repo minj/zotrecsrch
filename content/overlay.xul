@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://zotrecsrch/content/overlay.css" type="text/css"?>
+
+<overlay id="zotrecsrch-overlay"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<commandset id="mainCommandSet">
+		<command id="cmd_zotrecsrch_toggle"
+			oncommand="Zotero.Prefs.set('recursiveCollections', !Zotero.Prefs.get('recursiveCollections'));
+			           ZoteroPane.search(true);"/>
+	</commandset>
+
+	<hbox id="zotero-items-toolbar" align="center">
+		<toolbarbutton id="zotrecsrch-toggle-btn" class="zotero-tb-button" tooltiptext="Toggle recursive collections" command="cmd_zotrecsrch_toggle" insertafter="zotero-tb-search" type="checkbox"></toolbarbutton>
+	</hbox>
+
+	<script src="chrome://zotrecsrch/content/include.js"/>
+</overlay>
